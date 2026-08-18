@@ -41,8 +41,13 @@ untrusted code, experiments, or anything that must not touch the host.
 
 ## Notes
 
-- This is a DSH **bundle**: one `dsh plugin add` installs all four plugins and
-  mounts them via `cordis.patch.yml`.
+- This is a DSH **bundle**: one `dsh plugin add` installs everything and
+  `cordis.patch.yml` mounts the owner + `vm_bash` alongside the host world.
+- The bundle ships self-contained esbuild entries (`dist/`) whose only external
+  imports are npm packages (`microsandbox`, `@deepseek-ai/cordis`, `dsh-tools`,…).
+- `fs-microsandbox` and `subprocess-microsandbox` are the execution-world
+  adapters (swap-in for host `subprocess-local`/`fs-sandbox`); the alongside
+  composition mounts only the owner + tool so nothing on the host is disabled.
 - Dependencies (`microsandbox` SDK, `@deepseek-ai/cordis`, `dsh-tools`,
   `dsh-fs`, `dsh-subprocess`) resolve from npm at install time.
 - Source of the plugins: [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
