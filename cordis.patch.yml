@@ -1,0 +1,14 @@
+# Microsandbox VM execution ALONGSIDE the host world.
+# Adds a vm_bash tool that runs untrusted code in an isolated microVM with a
+# persistent /workspace volume. The host bash/fs/sandbox tools stay untouched.
+- insert:
+    - id: microsandbox
+      name: '@deepseek-ai/dsh-microsandbox'
+      config:
+        image: debian
+        cwd: /workspace
+        timeoutMs: 180000
+        volume: dsh-web-workspace
+        lazy: true
+    - id: tool-microsandbox
+      name: '@deepseek-ai/dsh-tool-microsandbox'

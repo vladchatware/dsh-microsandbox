@@ -1,0 +1,19 @@
+{
+  "name": "dsh-microsandbox",
+  "version": "0.1.0",
+  "description": "Microsandbox execution plugins for DeepSeek Harness: run untrusted code in local hardware-isolated microVMs with a persistent workspace volume, alongside the host tools (vm_bash).",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/dsh-fs-microsandbox": "file:./packages/fs-microsandbox",
+    "@deepseek-ai/dsh-microsandbox": "file:./packages/microsandbox",
+    "@deepseek-ai/dsh-subprocess-microsandbox": "file:./packages/subprocess-microsandbox",
+    "@deepseek-ai/dsh-tool-microsandbox": "file:./packages/tool-microsandbox"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
