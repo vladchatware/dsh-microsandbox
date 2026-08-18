@@ -6,10 +6,11 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-fs-microsandbox": "file:./packages/fs-microsandbox",
-    "@deepseek-ai/dsh-microsandbox": "file:./packages/microsandbox",
-    "@deepseek-ai/dsh-subprocess-microsandbox": "file:./packages/subprocess-microsandbox",
-    "@deepseek-ai/dsh-tool-microsandbox": "file:./packages/tool-microsandbox"
+    "@deepseek-ai/cordis": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-invariants": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.5",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "microsandbox": "0.6.10"
   },
   "dsh": {
     "bundle": {
