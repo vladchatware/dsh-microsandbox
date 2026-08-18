@@ -32,8 +32,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-invariants": "^0.1.0-rc.5",
-    "@deepseek-ai/cordis": "^0.1.0-rc.5"
+    "@deepseek-ai/dsh-invariants": "^0.0.1-rc.1",
+    "@deepseek-ai/cordis": "^4.0.1"
   },
   "dependencies": {
     "microsandbox": "0.6.10",
